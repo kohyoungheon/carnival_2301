@@ -12,4 +12,8 @@ class Visitor
   def add_preference(ride_category)
     @preferences << ride_category
   end
+
+  def tall_enough?(height_in_inches)
+    @height >= height_in_inches
+  end
 end

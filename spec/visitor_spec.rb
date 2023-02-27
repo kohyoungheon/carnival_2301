@@ -3,7 +3,7 @@ require "./lib/visitor"
 RSpec.describe Visitor do
   before(:each) do
     @visitor1 = Visitor.new("Bruce", 54, '$10')
-    @visitor1 = Visitor.new('Tucker', 36, '$5')
+    @visitor2 = Visitor.new('Tucker', 36, '$5')
     @visitor3 = Visitor.new('Penny', 64, '$15')
   end
 
@@ -24,6 +24,16 @@ RSpec.describe Visitor do
       @visitor1.add_preference(:water)
 
       expect(@visitor1.preferences).to eq([:gentle, :water])
+    end
+  end
+
+  describe "#tall_enough?" do
+    it "returns boolean whether visitor is taller than given argument" do
+
+      expect(@visitor1.tall_enough?(54)).to eq(true)
+      expect(@visitor1.tall_enough?(55)).to eq(false)
+      expect(@visitor2.tall_enough?(35)).to eq(true)
+      expect(@visitor2.tall_enough?(38)).to eq(false)
     end
   end
 end
