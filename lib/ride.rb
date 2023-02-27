@@ -1,5 +1,5 @@
 class Ride
-  attr_reader :name, :min_height, :admission_fee, :excitement
+  attr_reader   :name, :min_height, :admission_fee, :excitement
   attr_accessor :total_revenue, :rider_log
 
   def initialize(info_hash)

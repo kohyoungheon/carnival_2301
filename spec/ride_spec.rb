@@ -1,4 +1,5 @@
 require "./lib/ride"
+require "./lib/visitor"
 
 RSpec.describe Ride do
   before(:each) do
