@@ -8,6 +8,7 @@ RSpec.describe Ride do
     @visitor1 = Visitor.new("Bruce", 54, '$10')
     @visitor2 = Visitor.new('Tucker', 10, '$5')
     @visitor3 = Visitor.new('Penny', 64, '$15')
+    
   end
 
   describe "#initialize" do

@@ -1,6 +1,6 @@
 class Ride
   attr_reader   :name, :min_height, :admission_fee, :excitement
-  attr_accessor :total_revenue, :rider_log
+  attr_accessor :total_revenue, :rider_log, :total_riders
 
   def initialize(info_hash)
     @name = info_hash[:name]
@@ -9,6 +9,7 @@ class Ride
     @excitement = info_hash[:excitement]
     @total_revenue = 0
     @rider_log = Hash.new(0)
+    @total_riders = 0
   end
  
   def board_rider(visitor)
